@@ -6,7 +6,8 @@ var minjune = {
 		김: "kim",
 		이: "lee",
 		박: "park",
-		최: "choi"
+		최: "choi",
+		노: "roh"
 	},
 	Person: class{
 		constructor(){
@@ -24,6 +25,7 @@ var minjune = {
 			for(var i in this.body){
 				this.initial += minjune.romanize(this.body[i])[0];
 			}
+			this.birth = moment(1103932800000 + Math.random() * 1000 * 60 * 60 * 24 * 365 * 7).format("YYMMDD");
 		}
 	},
 	romanize: function(hangul){
